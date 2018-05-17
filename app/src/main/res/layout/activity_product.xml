@@ -19,14 +19,13 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="New Text"
-            android:textColor="#000000"
             android:textSize="35sp"
             android:textStyle="bold"
             android:textIsSelectable="false"
             android:gravity="center"/>
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/productImage"
             android:layout_width="250dp"
             android:layout_height="200dp"
             android:layout_marginTop="15dp"
@@ -37,8 +36,7 @@
             android:layout_gravity="center"
             android:maxHeight="150dp"
             android:maxWidth="150dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/pic_2" />
+            android:scaleType="fitXY" />
 
 
         <TextView
@@ -48,7 +46,6 @@
             android:layout_marginTop="15dip"
             android:text="New Text"
             android:textSize="24dip"
-            android:textColor="#000000"
             android:singleLine="false"
             android:gravity="center" />
 

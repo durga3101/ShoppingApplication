@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import bootcamp.android.R;
@@ -17,9 +18,11 @@ public class ProductActivity extends Activity {
 
         TextView titleTextView = findViewById(R.id.title);
         TextView descriptionTextView = findViewById(R.id.description);
+        ImageView imageView = findViewById(R.id.productImage);
 
         titleTextView.setText(getIntent().getStringExtra("title"));
         descriptionTextView.setText(getIntent().getStringExtra("description"));
+        imageView.setImageResource(getIntent().getIntExtra("image", -1));
     }
 
 }

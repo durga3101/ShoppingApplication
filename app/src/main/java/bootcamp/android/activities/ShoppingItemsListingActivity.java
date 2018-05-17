@@ -55,6 +55,7 @@ public class ShoppingItemsListingActivity extends Activity {
         Intent intent = new Intent(this, ProductActivity.class);
         intent.putExtra("title", product.getTitle());
         intent.putExtra("description", product.getDescription());
+        intent.putExtra("image", product.getDrawable());
 
         startActivity(intent);
 

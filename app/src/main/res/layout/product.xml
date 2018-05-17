@@ -41,5 +41,10 @@
             android:text="New Text"
             android:textColor="#454545"
             android:textSize="12dp"/>
+
+        <View
+            android:background="@android:color/holo_red_dark"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
     </LinearLayout>
 </LinearLayout>

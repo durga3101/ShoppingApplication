@@ -23,7 +23,7 @@ public class ProductDetailsPresenterTest {
     public void shouldReturnProductTitle() {
         ProductDetailsPresenter productDetailsPresenter = new ProductDetailsPresenter(mockView);
 
-        productDetailsPresenter.renderProduct("title", "desc", "imageUrl");
+        productDetailsPresenter.getProduct("title", "desc", "imageUrl");
 
         verify(mockView).renderProduct(any(Product.class));
     }

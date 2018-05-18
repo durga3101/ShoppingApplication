@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import bootcamp.android.R;
@@ -37,9 +39,9 @@ public class ShoppingItemsListAdapter extends RecyclerView.Adapter<ShoppingItems
   public void onBindViewHolder(ShoppingItemViewHolder holder, int position) {
     Product product = products.get(position);
     holder.titleView.setText(product.getTitle());
-    ImageDownloader imageDownloader = new ImageDownloader();
-    Bitmap bitmap = imageDownloader.downloadImage(product.getImageUrl());
-    holder.imageView.setImageBitmap(bitmap);
+    Picasso.with(holder.itemView.getContext())
+            .load(product.getImageUrl())
+            .into(holder.imageView);
   }
 
   @Override

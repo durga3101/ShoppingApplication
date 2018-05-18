@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import bootcamp.android.R;
 import bootcamp.android.services.ImageDownloader;
 
@@ -31,9 +33,9 @@ public class ProductDetailsActivity extends Activity {
     issueDescription.setText(description);
 
     ImageView imageView = (ImageView) findViewById(R.id.product_image);
-    ImageDownloader imageDownloader = new ImageDownloader();
-    Bitmap bitmap = imageDownloader.downloadImage(imageUrl);
-    imageView.setImageBitmap(bitmap);
+    Picasso.with(this)
+            .load(imageUrl)
+            .into(imageView);
   }
 
 }
